@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-Chapter 3" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.7.0">
+<title data-rh="true">部署的順序 | Learn MDM</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://tw-flipper.github.io/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://tw-flipper.github.io/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://tw-flipper.github.io/Chapter 3"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="部署的順序 | Learn MDM"><meta data-rh="true" name="description" content="Apple 產品導入流程以及簡化手段"><meta data-rh="true" property="og:description" content="Apple 產品導入流程以及簡化手段"><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://tw-flipper.github.io/Chapter 3"><link data-rh="true" rel="alternate" href="https://tw-flipper.github.io/Chapter 3" hreflang="en"><link data-rh="true" rel="alternate" href="https://tw-flipper.github.io/Chapter 3" hreflang="x-default"><link rel="alternate" type="application/rss+xml" href="/blog/rss.xml" title="Learn MDM RSS Feed">
+<link rel="alternate" type="application/atom+xml" href="/blog/atom.xml" title="Learn MDM Atom Feed"><link rel="stylesheet" href="/assets/css/styles.ce06f367.css">
+<script src="/assets/js/runtime~main.5402d553.js" defer="defer"></script>
+<script src="/assets/js/main.a75c32fc.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<script>!function(){function t(t){document.documentElement.setAttribute("data-theme",t)}var e=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();t(null!==e?e:"light")}(),function(){try{const n=new URLSearchParams(window.location.search).entries();for(var[t,e]of n)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><link rel="preload" as="image" href="/img/logo.svg"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="navbar navbar--fixed-top"><div class="navbar__inner"><div class="navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/"><div class="navbar__logo"><img src="/img/logo.svg" alt="My Site Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/img/logo.svg" alt="My Site Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate">Learn MDM</b></a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/">Tutorial</a></div><div class="navbar__items navbar__items--right"><a href="https://github.com/facebook/docusaurus" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">GitHub<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="Switch between dark and light mode (currently light mode)" aria-label="Switch between dark and light mode (currently light mode)" aria-live="polite" aria-pressed="false"><svg viewBox="0 0 24 24" width="24" height="24" class="lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" class="darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/">Overview</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/Chapter 1">Apple 產品的優點</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/Chapter 2">Apple 詞彙表</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" href="/Chapter 3">部署的順序</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/Chapter 4">活用 MDM</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/推薦連結">推薦連結</a></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs" itemscope="" itemtype="https://schema.org/BreadcrumbList"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li itemscope="" itemprop="itemListElement" itemtype="https://schema.org/ListItem" class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link" itemprop="name">部署的順序</span><meta itemprop="position" content="1"></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>部署的順序</h1></header>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="apple-產品導入流程以及簡化手段">Apple 產品導入流程以及簡化手段<a href="#apple-產品導入流程以及簡化手段" class="hash-link" aria-label="Direct link to Apple 產品導入流程以及簡化手段" title="Direct link to Apple 產品導入流程以及簡化手段">​</a></h2>
+<p>理解Apple 提供給企業與教育界使用的方案後，讓我們看看具體導入的流程吧。
+這裡將告訴你多數人最常遇到的問題，從購買到初始設定的重點所在。</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="導入流程">導入流程<a href="#導入流程" class="hash-link" aria-label="Direct link to 導入流程" title="Direct link to 導入流程">​</a></h3>
+<p>STEP 1 - 事前準備
+購買 Apple 產品以及取得 D-U-N-S（鄧白氏）認證號碼</p>
+<p>STEP 2 - 註冊組織
+註冊 ABM / ASM 並且 通過 Apple 審核</p>
+<p>STEP 3 - 設定 ABM/ASM
+製作管理式 Apple 帳號以及建立新帳號</p>
+<p>STEP 4 - 連結 MDM 服務
+串接 MDM 工具以及與「自動裝置註冊」的裝置連結</p>
+<p>STEP 5 - 進行基本設定
+註冊使用者以及一次購買內容並且分發</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="step-1---事前準備">STEP 1 - 事前準備<a href="#step-1---事前準備" class="hash-link" aria-label="Direct link to STEP 1 - 事前準備" title="Direct link to STEP 1 - 事前準備">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="購買-apple-產品以及取得-d-u-n-s鄧白氏認證號碼">購買 Apple 產品以及取得 D-U-N-S（鄧白氏）認證號碼<a href="#購買-apple-產品以及取得-d-u-n-s鄧白氏認證號碼" class="hash-link" aria-label="Direct link to 購買 Apple 產品以及取得 D-U-N-S（鄧白氏）認證號碼" title="Direct link to 購買 Apple 產品以及取得 D-U-N-S（鄧白氏）認證號碼">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="推薦使用自動裝置註冊">推薦使用「自動裝置註冊」<a href="#推薦使用自動裝置註冊" class="hash-link" aria-label="Direct link to 推薦使用「自動裝置註冊」" title="Direct link to 推薦使用「自動裝置註冊」">​</a></h4>
+<p>當在大量部署 iPhone、iPad 與 Mac 等 Apple 產品時，推薦使用 Apple 所提供輔 助部署機制「自動裝置註冊」來省時省力。可以透過支援「自動裝置註冊」的通路 窗口，或者支援「自動裝置註冊」的 Apple Store 都可以，但請在購買前確認其是否 支援「自動裝置註冊」。購買以後，就會提供給你「Apple 客戶編號」或者「經銷商 編號」來註冊使用。
+<img decoding="async" loading="lazy" src="https://info.aatp.com.tw/hubfs/MDM%20Books%202025/Ch3/0800-095-988.png" alt="Apple Retail" class="img_ev3q">
+直接從 Apple 購買時，可透過免付費電話（ 台灣 0800-095-988）取得「Apple 客戶編號」。
+<a href="https://www.apple.com/tw/retail/business/" target="_blank" rel="noopener noreferrer">https://www.apple.com/tw/retail/business/</a></p>
+<p><img decoding="async" loading="lazy" src="https://info.aatp.com.tw/hubfs/MDM%20Books%202025/Ch3/HT204142.png" alt="Apple Automated Device Enrollment" class="img_ev3q">
+從 Apple Store 或支援「自動裝置註冊」的授權經銷
+商購買硬體時會提供給你「經銷商編號」。
+<a href="https://support.apple.com/zh-tw/HT204142" target="_blank" rel="noopener noreferrer">https://support.apple.com/zh-tw/HT204142</a></p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="取得鄧白氏認證號碼">取得鄧白氏認證號碼<a href="#取得鄧白氏認證號碼" class="hash-link" aria-label="Direct link to 取得鄧白氏認證號碼" title="Direct link to 取得鄧白氏認證號碼">​</a></h4>
+<p>可以與購買 Apple 產品同步進行的事前準備手續包括取得鄧白氏（D-U-N-S：The Data Universal Numbering System）號碼。這是 1962 年由 D&amp;B（Dun and Bradtreet）所 開發的九碼企業識別號碼，可以透過它來確認全世界的企業與法人團體。ABM 以及 ASM 都透過這固定號碼來識別個別組織。可以與當地鄧白氏直接聯絡付費申請。其實 也可以透過 Apple 開發者服務（Apple Developer Program）來免費取得號碼，需要以 英文和鄧白氏公司進行聯絡確認各事項，時間約為二至三週。新申請鄧白氏號碼時， 按照組織形態的不同，所需要準備的文件會有所差異。</p>
+<p><img decoding="async" loading="lazy" src="https://info.aatp.com.tw/hubfs/MDM%20Books%202025/Ch3/D-U-N-SNumber.png" alt="D-U-N-S website" class="img_ev3q">
+在台灣若要直接申請鄧白氏號碼，可和鄧白氏接洽
+付費申請。
+<a href="https://dunscertified.dnb.com.tw" target="_blank" rel="noopener noreferrer">https://dunscertified.dnb.com.tw</a></p>
+<p><img decoding="async" loading="lazy" src="https://info.aatp.com.tw/hubfs/MDM%20Books%202025/Ch3/dunscertified.png" alt="Apple Developer D-U-N-S Number" class="img_ev3q">
+Apple 開發者服務也可以申請鄧白氏號碼。
+<a href="https://developer.apple.com/support/D-U-N-S/" target="_blank" rel="noopener noreferrer">https://developer.apple.com/support/D-U-N-S/</a></p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="註冊組織">註冊組織<a href="#註冊組織" class="hash-link" aria-label="Direct link to 註冊組織" title="Direct link to 註冊組織">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="註冊-abm--asm-並且通過-apple-審核">註冊 ABM / ASM 並且通過 Apple 審核<a href="#註冊-abm--asm-並且通過-apple-審核" class="hash-link" aria-label="Direct link to 註冊 ABM / ASM 並且通過 Apple 審核" title="Direct link to 註冊 ABM / ASM 並且通過 Apple 審核">​</a></h3>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="通過-apple-的審查吧">通過 Apple 的審查吧<a href="#通過-apple-的審查吧" class="hash-link" aria-label="Direct link to 通過 Apple 的審查吧" title="Direct link to 通過 Apple 的審查吧">​</a></h3>
+<p>購買 Apple 產品之後，企業就要註冊 ABM，學校則是註冊 ASM。手續都是透過網頁瀏覽器於線上到入口網站進行即可。所需要準備的資料就是：申請組織的資訊以及 與 Apple 訂立契約的負責人的聯絡方式。Apple 會透過所提供的負責人電話號碼或郵件位址進行確認聯絡，所以由負責人本人來進行登記設定會最為直接完善。 註冊審查時間最長不會超過五個工作日，會於平日早上九點到晚上五點營業時間內進行電話上的確認聯絡，所以請要有接電話的心理準備。如果沒有缺少任何資料或錯誤的話，就會將審核結果透過郵件寄送，在一個禮拜之內就可以完成註冊手續。</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="註冊-abm">註冊 ABM<a href="#註冊-abm" class="hash-link" aria-label="Direct link to 註冊 ABM" title="Direct link to 註冊 ABM">​</a></h4>
+<p><img decoding="async" loading="lazy" src="https://info.aatp.com.tw/hubfs/MDM%20Books%202025/Ch3/Apple%20Business%20Manager%20login.png" alt="Apple Business Manager login" class="img_ev3q">
+以註冊 ABM 為例進行說明。首先到 ABM 網站點擊「立即註冊」<a href="https://business.apple.com" target="_blank" rel="noopener noreferrer">https://business.apple.com</a></p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="輸入申請資訊">輸入申請資訊<a href="#輸入申請資訊" class="hash-link" aria-label="Direct link to 輸入申請資訊" title="Direct link to 輸入申請資訊">​</a></h4>
+<p><img decoding="async" loading="lazy" src="https://info.aatp.com.tw/hubfs/MDM%20Books%202025/Ch3/Registeration%20form.png" alt="Registeration form" class="img_ev3q">
+逐次輸入「姓氏」、「名字」、「工作電子郵件」「企業名稱」，「網站」並選擇是否要收到「Apple 商務必備」的相關新聞和更新資訊，然後選取「繼續」。</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="建立帳號">建立帳號<a href="#建立帳號" class="hash-link" aria-label="Direct link to 建立帳號" title="Direct link to 建立帳號">​</a></h4>
+<p><img decoding="async" loading="lazy" src="https://info.aatp.com.tw/hubfs/MDM%20Books%202025/Ch3/Create%20account.png" alt="Create account" class="img_ev3q">
+建立並確認新帳號的新密碼，然後選取區碼，並輸入你的電話號碼。</p>
+<p>到這邊就完成了 ABM / ASM 的註冊並且可以開始使用，但是當你登入時會發現很多功能不能夠使用，這些是因為 Apple 還沒有驗證，當驗證完成後就可以使用 ABM / ASM 的所有功能。</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="登入-abm--asm">登入 ABM / ASM<a href="#登入-abm--asm" class="hash-link" aria-label="Direct link to 登入 ABM / ASM" title="Direct link to 登入 ABM / ASM">​</a></h4>
+<p><img decoding="async" loading="lazy" src="https://info.aatp.com.tw/hubfs/MDM%20Books%202025/Ch3/Apple%20Business%20Manager%20login.png" alt="Apple Business Manager login" class="img_ev3q">
+使用先前建立好的帳號登入 ABM / ASM。</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="驗證組織資訊">驗證組織資訊<a href="#驗證組織資訊" class="hash-link" aria-label="Direct link to 驗證組織資訊" title="Direct link to 驗證組織資訊">​</a></h4>
+<p><img decoding="async" loading="lazy" src="https://info.aatp.com.tw/hubfs/MDM%20Books%202025/Ch3/Organization%20Setting%20.png" alt="機構設定" class="img_ev3q">
+前往機構設定，並選取「驗證」。</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="輸入組織資訊">輸入組織資訊<a href="#輸入組織資訊" class="hash-link" aria-label="Direct link to 輸入組織資訊" title="Direct link to 輸入組織資訊">​</a></h4>
+<p><img decoding="async" loading="lazy" src="https://info.aatp.com.tw/hubfs/MDM%20Books%202025/Ch3/Organization%20Info.png" alt="機構資訊" class="img_ev3q">
+逐次輸入「組織名稱」、取得的「D-U-N-S 號碼」、「電話號碼」（代表號等）「首頁網址」，</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="輸入驗證聯絡人資訊">輸入驗證聯絡人資訊<a href="#輸入驗證聯絡人資訊" class="hash-link" aria-label="Direct link to 輸入驗證聯絡人資訊" title="Direct link to 輸入驗證聯絡人資訊">​</a></h4>
+<p><img decoding="async" loading="lazy" src="https://info.aatp.com.tw/hubfs/MDM%20Books%202025/Ch3/Contact%20Info.png" alt="驗證聯絡人資訊" class="img_ev3q">
+輸入組織代表者的名字以及郵件位址、職稱等。完成以後點擊「繼續」。</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="以郵件通知審查狀況">以郵件通知審查狀況<a href="#以郵件通知審查狀況" class="hash-link" aria-label="Direct link to 以郵件通知審查狀況" title="Direct link to 以郵件通知審查狀況">​</a></h4>
+<p>開始進行審查，就會收到來自 Apple 的郵件。審查最多會花上五個工作天，如果中間遇到週末，大致會需要一個禮拜的時間。</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="apple-來電確認">Apple 來電確認<a href="#apple-來電確認" class="hash-link" aria-label="Direct link to Apple 來電確認" title="Direct link to Apple 來電確認">​</a></h4>
+<p>平日工作時間會收到來自 Apple 窗口的來電。如果登記的電話沒有人接聽，就會寄送郵件來提醒。</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="電話中主要會針對這幾點進行確認">電話中主要會針對這幾點進行確認<a href="#電話中主要會針對這幾點進行確認" class="hash-link" aria-label="Direct link to 電話中主要會針對這幾點進行確認" title="Direct link to 電話中主要會針對這幾點進行確認">​</a></h4>
+<ol>
+<li>登記的身份是否為本人？</li>
+<li>是不是 ABM / ASM 的設定管理負責人？</li>
+<li>登記的電話號碼與首頁網址是否正確？</li>
+<li>使用的目的是為了管理公司裝置嗎？</li>
+</ol>
+<p>待確認完成後就可以享受 ABM / ASM 的全功能了。</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="設定-abm--asm">設定 ABM / ASM<a href="#設定-abm--asm" class="hash-link" aria-label="Direct link to 設定 ABM / ASM" title="Direct link to 設定 ABM / ASM">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="建立管理式-apple-帳號">建立管理式 Apple 帳號<a href="#建立管理式-apple-帳號" class="hash-link" aria-label="Direct link to 建立管理式 Apple 帳號" title="Direct link to 建立管理式 Apple 帳號">​</a></h3>
+<p>第一次登入後，管理式 Apple 帳號只有一組登記在公司下頭，後續最好追加其它的管理者帳號，並且幫員工或者教職員等建立管理式 Apple 帳號。這時為了不和一般所使用郵件位置重複，而會給予加上子網域名「appleaccount」的 Apple 帳號。但是為了同仁在登入時更加方便，可以透過「驗證網域」功能驗證組織所希望使用的網域，後續在建立其他的 Apple 帳號時即可選擇組織網域並進行建立，未來使用者登入時也不需要再額外記住另一組網域。</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="新增網域">新增網域<a href="#新增網域" class="hash-link" aria-label="Direct link to 新增網域" title="Direct link to 新增網域">​</a></h4>
+<p><img decoding="async" loading="lazy" src="https://info.aatp.com.tw/hubfs/MDM%20Books%202025/Ch3/add%20domain.png" alt="管理式 Apple 帳號" class="img_ev3q"></p>
+<p>前往管理式 Apple 帳號，並選取「新增網域」。</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="輸入網域">輸入網域<a href="#輸入網域" class="hash-link" aria-label="Direct link to 輸入網域" title="Direct link to 輸入網域">​</a></h4>
+<p><img decoding="async" loading="lazy" src="https://info.aatp.com.tw/hubfs/MDM%20Books%202025/Ch3/type%20domain.png" alt="輸入網域" class="img_ev3q">
+在欄位中輸入組織希望使用的網域，輸入完成後選取「新增網域」。</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="驗證網域">驗證網域<a href="#驗證網域" class="hash-link" aria-label="Direct link to 驗證網域" title="Direct link to 驗證網域">​</a></h4>
+<p><img decoding="async" loading="lazy" src="https://info.aatp.com.tw/hubfs/MDM%20Books%202025/Ch3/verify%20domain.png" alt="驗證網域" class="img_ev3q">
+網域新增完成後即可在清單中查看到剛才所新增的網域，選取「驗證」。</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="dns-txt-紀錄">DNS TXT 紀錄<a href="#dns-txt-紀錄" class="hash-link" aria-label="Direct link to DNS TXT 紀錄" title="Direct link to DNS TXT 紀錄">​</a></h4>
+<p><img decoding="async" loading="lazy" src="https://info.aatp.com.tw/hubfs/MDM%20Books%202025/Ch3/DNS%20TXT.png" alt="TXT 紀錄" class="img_ev3q">
+畫面中所出現的 TXT 紀錄必須要新增至網域管理的 DNS 設定中，當新增完成後選取「驗證」即可。</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="新增帳號">新增帳號<a href="#新增帳號" class="hash-link" aria-label="Direct link to 新增帳號" title="Direct link to 新增帳號">​</a></h4>
+<p><img decoding="async" loading="lazy" src="https://info.aatp.com.tw/hubfs/MDM%20Books%202025/Ch3/add%20account.png" alt="新增帳號" class="img_ev3q">
+要新增管理式 Apple 帳號，請於側邊欄選擇「帳號」於最右側欄位左上角選曲「＋（新增）」按鍵。</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="輸入姓名與使用者名稱">輸入姓名與使用者名稱<a href="#輸入姓名與使用者名稱" class="hash-link" aria-label="Direct link to 輸入姓名與使用者名稱" title="Direct link to 輸入姓名與使用者名稱">​</a></h4>
+<p><img decoding="async" loading="lazy" src="https://info.aatp.com.tw/hubfs/MDM%20Books%202025/Ch3/Account%20info.png" alt="Account information form" class="img_ev3q">
+輸入新帳號的姓名以及受管理 Apple 帳號的使用者名稱，以及職稱和實際在使用的郵件位址後按下「儲存」。</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="管理式-apple-帳號的功能與機制">管理式 Apple 帳號的功能與機制<a href="#管理式-apple-帳號的功能與機制" class="hash-link" aria-label="Direct link to 管理式 Apple 帳號的功能與機制" title="Direct link to 管理式 Apple 帳號的功能與機制">​</a></h3>
+<p>管理式 Apple 帳號，是限制一般 Apple 帳號 可使用的一部分功能後， 供組織專用的 Apple ID。公司的話用來配發給員工，學校則是用來配發給教職員、學生與兒童等。管理式 Apple 帳號好處在於，組織內所使用的 Apple 帳號可由管理者一次設定、管理、針對個別管理式 Apple 帳號設定職務與權限。例如，教師可以透過「大量購買」機制購買 App 或者電子書，對學生、兒童的管理式 Apple 帳號進行密碼重設等。此外，管理式 Apple 帳號當拿到帳號的使用者輸入錯誤密碼 10 次時，帳號就會被鎖定。</p>
+<p>管理式 Apple 帳號與其他的 Apple 帳號一樣，可以用於登入配發給個人或者共用的裝置。此外，若是教育機構使用的話，則可以用來
+取各式各樣的 Apple 雲端服務，如 iCloud（照片與備忘錄、行事曆
+等）、iTunesU 教育服務、使用 iWork 的協同工作功能等。不過需要
+注意，為了確保其安全性，管理式 Apple 帳號也有所限制，有些服務
+與功能不能使用（如下表）。</p>
+<p>企業與學校導入 Apple 產品時，不一定要為每一位職員以及教
+職員、學生、兒童配發管理式 Apple ID，但要是能活用這機制，可
+以更加確保終端使用者的隱私權以及對組織資安進行保障，更能夠
+有效利用導入的裝置。</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="管理式-apple-帳號不能使用的功能與服務">管理式 Apple 帳號不能使用的功能與服務<a href="#管理式-apple-帳號不能使用的功能與服務" class="hash-link" aria-label="Direct link to 管理式 Apple 帳號不能使用的功能與服務" title="Direct link to 管理式 Apple 帳號不能使用的功能與服務">​</a></h3>
+<ul>
+<li>購買 App Store, iTunes Store, Apple Books 內容（但可以瀏覽）</li>
+<li>Apple Pay</li>
+<li>尋找（舊稱尋找我的iPhone、Mac、朋友）</li>
+<li>iCloud 信箱、iCloud 家庭共享</li>
+<li>接續 HomeKit 裝置</li>
+<li>鎖定備忘錄</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="連結-mdm-服務">連結 MDM 服務<a href="#連結-mdm-服務" class="hash-link" aria-label="Direct link to 連結 MDM 服務" title="Direct link to 連結 MDM 服務">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="整合-mdm-服務以及與自動裝置註冊的裝置連結">整合 MDM 服務以及與「自動裝置註冊」的裝置連結<a href="#整合-mdm-服務以及與自動裝置註冊的裝置連結" class="hash-link" aria-label="Direct link to 整合 MDM 服務以及與「自動裝置註冊」的裝置連結" title="Direct link to 整合 MDM 服務以及與「自動裝置註冊」的裝置連結">​</a></h3>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="挑選-mdm-服務並且進行初始設定">挑選 MDM 服務並且進行初始設定<a href="#挑選-mdm-服務並且進行初始設定" class="hash-link" aria-label="Direct link to 挑選 MDM 服務並且進行初始設定" title="Direct link to 挑選 MDM 服務並且進行初始設定">​</a></h3>
+<p>購買完 Apple 產品，也完成 ABM 或 ASM 的設定後，就要進入將裝置配發給終
+端使用者的階段了。這一階段最為重要的工作，就是在配發前幫裝置進行初始設定
+（Kitting）。要讓終端使用者可以立即以裝置進行各項工作的話，就需要基於使用政策來對裝置進行設定。
+為了完成這項工作就需要 MDM 工具。選擇一款對自己組織最合適的 MDM 工具
+後就要註冊到 ABM 或 ASM 系統中。 然後透過 MDM 工具註冊各個透過「自動裝置註冊」購買的裝置，就可以讓 MDM 與各裝置進行連結。</p>
+<p>本部分將使用 Apple 產品管理首選解決方案 Jamf Pro 為例進行說明。</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="挑選-mdm-服務">挑選 MDM 服務<a href="#挑選-mdm-服務" class="hash-link" aria-label="Direct link to 挑選 MDM 服務" title="Direct link to 挑選 MDM 服務">​</a></h4>
+<p><img decoding="async" loading="lazy" src="https://info.aatp.com.tw/hubfs/MDM%20Books%202025/Ch3/jamf.com.png" alt="Jamf Website" class="img_ev3q">
+挑選 MDM（行動裝置管理）服務。MDM 提供商每一家的服務內容、價格與支援內容都不一樣，需要按需求詢價後選出最適合的方案。</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="連結-mdm-伺服器">連結 MDM 伺服器<a href="#連結-mdm-伺服器" class="hash-link" aria-label="Direct link to 連結 MDM 伺服器" title="Direct link to 連結 MDM 伺服器">​</a></h4>
+<p><img decoding="async" loading="lazy" src="https://info.aatp.com.tw/hubfs/MDM%20Books%202025/Ch3/Apple%20Business%20Manager-1.png" alt="Apple Business Manager" class="img_ev3q">
+登入 ABM 或 ASM 後，選取側邊欄中的姓名後選擇「偏好設定」，在 MDM 伺服器右邊選擇「新增」</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="登入-mdm-服務">登入 MDM 服務<a href="#登入-mdm-服務" class="hash-link" aria-label="Direct link to 登入 MDM 服務" title="Direct link to 登入 MDM 服務">​</a></h4>
+<p><img decoding="async" loading="lazy" src="https://info.aatp.com.tw/hubfs/MDM%20Books%202025/Ch3/Jamf%20Pro%20Login%20Window.001.png" alt="Jamf Pro Login Window" class="img_ev3q">
+到 MDM 服務網頁輸入使用者帳號與密碼後登入。如果使用 Jamf Pro 的話，畫面會如圖所示。</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="由設定選擇自動裝置註冊">由設定選擇「自動裝置註冊」<a href="#由設定選擇自動裝置註冊" class="hash-link" aria-label="Direct link to 由設定選擇「自動裝置註冊」" title="Direct link to 由設定選擇「自動裝置註冊」">​</a></h4>
+<p><img decoding="async" loading="lazy" src="https://info.aatp.com.tw/hubfs/MDM%20Books%202025/Ch3/Automated%20Device%20Enrollment.png" alt="Automated Device Enrollment" class="img_ev3q"></p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="下載公鑰">下載公鑰<a href="#下載公鑰" class="hash-link" aria-label="Direct link to 下載公鑰" title="Direct link to 下載公鑰">​</a></h4>
+<p><img decoding="async" loading="lazy" src="https://info.aatp.com.tw/hubfs/MDM%20Books%202025/Ch3/Download%20Public%20Key.001.png" alt="Download Public Key" class="img_ev3q">
+顯示自動裝置註冊的設定畫面後，點擊右上角的「公鑰（Public Key）」， 就會下載副檔名為「.pem」的憑證檔案，會存放到「下載」檔案夾。</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="上傳公鑰">上傳公鑰<a href="#上傳公鑰" class="hash-link" aria-label="Direct link to 上傳公鑰" title="Direct link to 上傳公鑰">​</a></h4>
+<p><img decoding="async" loading="lazy" src="https://info.aatp.com.tw/hubfs/MDM%20Books%202025/Ch3/Upload%20Public%20Key.013.png" alt="Upload Public Key" class="img_ev3q"></p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="儲存-mdm-伺服器設定">儲存 MDM 伺服器設定<a href="#儲存-mdm-伺服器設定" class="hash-link" aria-label="Direct link to 儲存 MDM 伺服器設定" title="Direct link to 儲存 MDM 伺服器設定">​</a></h4>
+<p><img decoding="async" loading="lazy" src="https://info.aatp.com.tw/hubfs/MDM%20Books%202025/Ch3/Save%20MDM%20Server%20settings.001.png" alt="Save MDM Server settings" class="img_ev3q">
+公鑰上傳完畢以後， 點擊右下「儲存」按鍵。之後就會將透過公鑰取得的 MDM 伺服器資訊儲存在 ABM 或 ASM 系統中。</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="下載-abmasm-的權杖">下載 ABM/ASM 的權杖<a href="#下載-abmasm-的權杖" class="hash-link" aria-label="Direct link to 下載 ABM/ASM 的權杖" title="Direct link to 下載 ABM/ASM 的權杖">​</a></h4>
+<p><img decoding="async" loading="lazy" src="https://info.aatp.com.tw/hubfs/MDM%20Books%202025/Ch3/Download%20ADE%20token.001.png" alt="Download ADE token" class="img_ev3q">
+接著要發行 ABM/ASM 的權杖 （Token）。 畫面點擊 「下載 MDM 伺服器代號」，就會將副檔名為「.p7m」的憑證檔案下載到「下載」檔案夾中。</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="上傳-abmasm-的權杖">上傳 ABM/ASM 的權杖<a href="#上傳-abmasm-的權杖" class="hash-link" aria-label="Direct link to 上傳 ABM/ASM 的權杖" title="Direct link to 上傳 ABM/ASM 的權杖">​</a></h4>
+<p><img decoding="async" loading="lazy" src="https://info.aatp.com.tw/hubfs/MDM%20Books%202025/Ch3/Upload%20ADE%20token1.001.png" alt="Upload ADE token1" class="img_ev3q">
+回到 MDM 服務的「自動裝置註冊」畫面，點擊「新增」按鍵。設定「顯示名稱」後點擊「上傳伺服器權杖檔案」。
+<img decoding="async" loading="lazy" src="https://info.aatp.com.tw/hubfs/MDM%20Books%202025/Ch3/Upload%20ADE%20token2.001.png" alt="Upload ADE token2" class="img_ev3q">
+跳出視窗後點選「選擇檔案」，到「下載」檔案夾中選擇剛才下載的 ABM/ASM 權杖Token，點擊「上傳」。</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="完成伺服器註冊">完成伺服器註冊<a href="#完成伺服器註冊" class="hash-link" aria-label="Direct link to 完成伺服器註冊" title="Direct link to 完成伺服器註冊">​</a></h4>
+<p><img decoding="async" loading="lazy" src="https://info.aatp.com.tw/hubfs/MDM%20Books%202025/Ch3/ADE%20Information%20in%20MDM%5D.001.png" alt="ADE Information in MDM" class="img_ev3q">
+上傳完畢後，MDM 服務就會顯示伺服器的識別碼（UUID）以及管理者 ID 和組織資訊等訊息。</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="完成權杖交換">完成權杖交換<a href="#完成權杖交換" class="hash-link" aria-label="Direct link to 完成權杖交換" title="Direct link to 完成權杖交換">​</a></h4>
+<p><img decoding="async" loading="lazy" src="https://info.aatp.com.tw/hubfs/MDM%20Books%202025/Ch3/ADE%20Information%20in%20ABM.001.png" alt="ADE Information in ABM" class="img_ev3q">
+這樣就完成 ABM / ASM 和 MDM 服務間的權杖交換，當需要修改資訊或者變更設定時，請到 ABM / ASM 的此畫面進行。</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="輸入購買通路資訊">輸入購買通路資訊<a href="#輸入購買通路資訊" class="hash-link" aria-label="Direct link to 輸入購買通路資訊" title="Direct link to 輸入購買通路資訊">​</a></h4>
+<p><img decoding="async" loading="lazy" src="https://info.aatp.com.tw/hubfs/MDM%20Books%202025/Ch3/Device%20suppliers.001.png" alt="Device suppliers" class="img_ev3q">
+於 ABM/ASM 的「偏好設定」畫面選擇「MDM 伺服器指派」，於客戶編號右邊選擇「編輯」並輸入「Apple 客戶編號」（從 Apple Store 購買的話），或者「經銷商編號」（於電信商、Apple 授權企業／教育經銷商購買）來進行註冊。</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="指派裝置">指派裝置<a href="#指派裝置" class="hash-link" aria-label="Direct link to 指派裝置" title="Direct link to 指派裝置">​</a></h4>
+<p><img decoding="async" loading="lazy" src="https://info.aatp.com.tw/hubfs/MDM%20Books%202025/Ch3/Assign%20Devices.001.png" alt="Assign Devices" class="img_ev3q">
+點擊側邊欄的「裝置」，並且在裡面選擇想要進行「自動裝置註冊」的設備，點擊右上角按鈕，選擇「編輯裝置管理服務」，並且在清單中選擇要分配給哪一個 MDM 伺服器。</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="進行基本設定">進行基本設定<a href="#進行基本設定" class="hash-link" aria-label="Direct link to 進行基本設定" title="Direct link to 進行基本設定">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="註冊使用者以及一次購買內容並且分發">註冊使用者以及一次購買內容並且分發<a href="#註冊使用者以及一次購買內容並且分發" class="hash-link" aria-label="Direct link to 註冊使用者以及一次購買內容並且分發" title="Direct link to 註冊使用者以及一次購買內容並且分發">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="一次部署各種設定">一次部署各種設定<a href="#一次部署各種設定" class="hash-link" aria-label="Direct link to 一次部署各種設定" title="Direct link to 一次部署各種設定">​</a></h4>
+<p>這是最後一個步驟，將使用 MDM 工具來部署初始設定，讓我們從了解 ABM 或
+ASM 最基本的設定方式開始吧。</p>
+<p>首先得要針對使用裝置的成員設定「職務」。以 ABM 為範例，一般對員工的管
+理或者裝置的管理，分發 App 等，都會由多數人擔任管理者，在 ABM 上頭，就有「成員經理」、「裝置註冊經理」、「內容經理」等職務，分別有著不同的權限。此外，當分公司、店面、工廠等有著多數據點時，也可以進行「位置」的設定，更可以對應環境來分配內容。ASM 也可以使用相同的思維方式配置，另外還有供學生、兒童分組的「教室」需要進行設定。</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="設定職務">設定職務<a href="#設定職務" class="hash-link" aria-label="Direct link to 設定職務" title="Direct link to 設定職務">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="確認各職務的權限">確認各職務的權限<a href="#確認各職務的權限" class="hash-link" aria-label="Direct link to 確認各職務的權限" title="Direct link to 確認各職務的權限">​</a></h4>
+<p><img decoding="async" loading="lazy" src="https://info.aatp.com.tw/hubfs/MDM%20Books%202025/Ch3/ADE%20Information%20in%20ABM.001.png" alt="ABM Roles" class="img_ev3q">
+這裡以 ABM 作為範例解說。點擊側邊欄「權限管理」中的「職務」可以確認各職務所具有的權限。</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="管理者職務">管理者職務<a href="#管理者職務" class="hash-link" aria-label="Direct link to 管理者職務" title="Direct link to 管理者職務">​</a></h4>
+<p><img decoding="async" loading="lazy" src="https://info.aatp.com.tw/hubfs/MDM%20Books%202025/Ch3/Content%20Manager.001.png" alt="Content Manager" class="img_ev3q">
+以「內容經理」為例，可以使用管理式 Apple 帳號來購買 App 以及電子書。而「裝置註冊經理」能夠進行「自動裝置註冊」，但不能買 App。</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="幫助使用者賦予職務">幫助使用者賦予職務<a href="#幫助使用者賦予職務" class="hash-link" aria-label="Direct link to 幫助使用者賦予職務" title="Direct link to 幫助使用者賦予職務">​</a></h4>
+<p><img decoding="async" loading="lazy" src="https://info.aatp.com.tw/hubfs/MDM%20Books%202025/Ch3/Add%20Roles.001.png" alt="Add Roles" class="img_ev3q">
+在「帳號」欄新增的使用者處可以賦予各種職務。點擊「編輯」按鍵可以變更調整權限。</p>
+<hr>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="購買內容">購買內容<a href="#購買內容" class="hash-link" aria-label="Direct link to 購買內容" title="Direct link to 購買內容">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="搜尋想要大量購買的-app">搜尋想要大量購買的 App<a href="#搜尋想要大量購買的-app" class="hash-link" aria-label="Direct link to 搜尋想要大量購買的 App" title="Direct link to 搜尋想要大量購買的 App">​</a></h4>
+<p><img decoding="async" loading="lazy" src="https://info.aatp.com.tw/hubfs/MDM%20Books%202025/Ch3/App%20purchase.001.png" alt="App purchase" class="img_ev3q">
+想要購買 App 或者電子書的話透過左邊選單中的「App 與電子書」（臺灣沒有電子書）進行。透過搜尋欄輸入關鍵字。</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="購買許可">購買許可<a href="#購買許可" class="hash-link" aria-label="Direct link to 購買許可" title="Direct link to 購買許可">​</a></h4>
+<p><img decoding="async" loading="lazy" src="https://info.aatp.com.tw/hubfs/MDM%20Books%202025/Ch3/Google%20App.001.png" alt="Google App" class="img_ev3q">
+這裡以免費的「Google」App 為例進行說明。選擇 App 後於右側欄會顯示「購買許可」等資訊。
+<em>購買付費 App 的話，組織需要預先準備購買的經費</em></p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="指定數量與配發目標">指定數量與配發目標<a href="#指定數量與配發目標" class="hash-link" aria-label="Direct link to 指定數量與配發目標" title="Direct link to 指定數量與配發目標">​</a></h4>
+<p><img decoding="async" loading="lazy" src="https://info.aatp.com.tw/hubfs/MDM%20Books%202025/Ch3/Assign%20license.001.png" alt="Assign license" class="img_ev3q">
+內容經理可以在這裡可以決定購買的數量以及想要配發的「位置」等。確認總金額後點擊「取得」。</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="購買完成">購買完成<a href="#購買完成" class="hash-link" aria-label="Direct link to 購買完成" title="Direct link to 購買完成">​</a></h4>
+<p><img decoding="async" loading="lazy" src="https://info.aatp.com.tw/hubfs/MDM%20Books%202025/Ch3/Purchage%20complete.001.png" alt="Purchage complete" class="img_ev3q">
+購買完成後可以在App 一覽看到「可以使用 100」，透過「管理許可」畫面可以將App 分發到不同的「位置」。</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="mdm-接收資訊">MDM 接收資訊<a href="#mdm-接收資訊" class="hash-link" aria-label="Direct link to MDM 接收資訊" title="Direct link to MDM 接收資訊">​</a></h4>
+<p><img decoding="async" loading="lazy" src="https://info.aatp.com.tw/hubfs/MDM%20Books%202025/Ch3/MDM%20App%20Catalog.001.png" alt="MDM App Catalog" class="img_ev3q">
+App 的資訊會自動傳送到所註冊的 MDM 服務。Jamf Pro 的話則可以透過「行動裝置 App」來進行確認。</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="一次配發更簡單">一次配發更簡單！<a href="#一次配發更簡單" class="hash-link" aria-label="Direct link to 一次配發更簡單！" title="Direct link to 一次配發更簡單！">​</a></h4>
+<p><img decoding="async" loading="lazy" src="https://info.aatp.com.tw/hubfs/MDM%20Books%202025/Ch3/App%20distribution.png" alt="App distribution" class="img_ev3q">
+如果透過 MDM 進行管理的話，不需要使用個人 Apple ID 等也可以一次配發到各裝置上頭。用來配發組織所使用的 App 非常方便。</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="設定位置">設定「位置」<a href="#設定位置" class="hash-link" aria-label="Direct link to 設定「位置」" title="Direct link to 設定「位置」">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="管理多個位置">管理多個位置<a href="#管理多個位置" class="hash-link" aria-label="Direct link to 管理多個位置" title="Direct link to 管理多個位置">​</a></h4>
+<p><img decoding="async" loading="lazy" src="https://info.aatp.com.tw/hubfs/MDM%20Books%202025/Ch3/Location%20Management.png" alt="Location management" class="img_ev3q">
+當有多個辦公室時， 可以從「位置」進行管理設定。如果有需要的話可點擊「新增位置（＋）」來增加。</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="根據位置不同製作內容代號">根據位置不同製作內容代號<a href="#根據位置不同製作內容代號" class="hash-link" aria-label="Direct link to 根據位置不同製作內容代號" title="Direct link to 根據位置不同製作內容代號">​</a></h4>
+<p><img decoding="async" loading="lazy" src="https://info.aatp.com.tw/hubfs/MDM%20Books%202025/Ch3/VPP%20Token.png" alt="VPP Token" class="img_ev3q">
+若有多個位置的話，可由「偏好設定」中「付款與帳單」下載各自的內容代號。當位置需要部署 App 時，就以此進行兌換。</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="將授權傳送到各個位置">將授權傳送到各個位置<a href="#將授權傳送到各個位置" class="hash-link" aria-label="Direct link to 將授權傳送到各個位置" title="Direct link to 將授權傳送到各個位置">​</a></h4>
+<p><img decoding="async" loading="lazy" src="https://info.aatp.com.tw/hubfs/MDM%20Books%202025/Ch3/Locations.png" alt="Locations" class="img_ev3q">
+設定完位置以後， 透過「大量採購」機制買到的 App 就可按位置別分配授權。可以在位置間轉讓授權，也可以委讓授權管理的量。</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="asm-的狀況">ASM 的狀況<a href="#asm-的狀況" class="hash-link" aria-label="Direct link to ASM 的狀況" title="Direct link to ASM 的狀況">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="設定班級">設定班級<a href="#設定班級" class="hash-link" aria-label="Direct link to 設定班級" title="Direct link to 設定班級">​</a></h4>
+<p><img decoding="async" loading="lazy" src="https://info.aatp.com.tw/hubfs/MDM%20Books%202025/Ch3/ASM%20Classroom.png" alt="ASM Classroom" class="img_ev3q">
+從側面欄選擇「班級」，就會顯示註冊的班級一覽。班級可以按照科別不同製作，並且可以登錄位置以及教師資訊。</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="確認學生兒童的資訊">確認學生、兒童的資訊<a href="#確認學生兒童的資訊" class="hash-link" aria-label="Direct link to 確認學生、兒童的資訊" title="Direct link to 確認學生、兒童的資訊">​</a></h4>
+<p><img decoding="async" loading="lazy" src="https://info.aatp.com.tw/hubfs/MDM%20Books%202025/Ch3/ASM%20Users.png" alt="ASM Users" class="img_ev3q">
+可以為學生、兒童發行各自的使用者編號以及管理式 Apple 帳號，可以透過 MDM 以 CSV 檔案一次上傳所有的教室資訊。</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="一次註冊教室資訊">一次註冊「教室」資訊<a href="#一次註冊教室資訊" class="hash-link" aria-label="Direct link to 一次註冊「教室」資訊" title="Direct link to 一次註冊「教室」資訊">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="設定第一次的-sftp-上傳">設定第一次的 SFTP 上傳<a href="#設定第一次的-sftp-上傳" class="hash-link" aria-label="Direct link to 設定第一次的 SFTP 上傳" title="Direct link to 設定第一次的 SFTP 上傳">​</a></h4>
+<p><img decoding="async" loading="lazy" src="https://info.aatp.com.tw/hubfs/MDM%20Books%202025/Ch3/Data%20source.png" alt="Data source" class="img_ev3q">
+ASM 可以透過 SIS / SFTP 來上傳教職員、學生、兒童以及教室資訊。登入 ASM 後，點擊左下角的名字，從「偏好設定」中點擊「管理式 Apple 帳號」，再到「目錄同步」中點擊「開始使用」。</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="以-csv-範本來處理資料">以 CSV 範本來處理資料<a href="#以-csv-範本來處理資料" class="hash-link" aria-label="Direct link to 以 CSV 範本來處理資料" title="Direct link to 以 CSV 範本來處理資料">​</a></h4>
+<p><img decoding="async" loading="lazy" src="https://info.aatp.com.tw/hubfs/MDM%20Books%202025/Ch3/SIS_SFTP.png" alt="SIS/SFTP" class="img_ev3q">
+就會提供給你 SFTP 的 URL、使用者名稱和密碼，利用此資訊於 SFTP 客戶端設定，同時可以下載 CSV 範本， 一共有位置、教室、學程等六種可供參考使用。</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="上傳到-sftp">上傳到 SFTP<a href="#上傳到-sftp" class="hash-link" aria-label="Direct link to 上傳到 SFTP" title="Direct link to 上傳到 SFTP">​</a></h4>
+<p><img decoding="async" loading="lazy" src="https://info.aatp.com.tw/hubfs/MDM%20Books%202025/Ch3/Upload%20with%20SFTP.png" alt="Upload with SFTP" class="img_ev3q">
+將這六個 CSV 檔案透過 ZIP 格式進行壓縮後，連結到 SFTP 伺服器，然後上傳
+到「Dropbox」檔案夾。上傳完畢後點擊透過 ASM 中「確認 SFTP 資料」來看是
+否有錯誤，也可以進行帳號與教室資訊的預覽。</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="分配權限給教職員">分配權限給教職員<a href="#分配權限給教職員" class="hash-link" aria-label="Direct link to 分配權限給教職員" title="Direct link to 分配權限給教職員">​</a></h4>
+<p><img decoding="async" loading="lazy" src="https://info.aatp.com.tw/hubfs/MDM%20Books%202025/Ch3/Assign%20role.png" alt="Assign role" class="img_ev3q">
+製作完管理式 Apple 帳號後，可配發給教職員用於登入。也可以給予各自所需要使用的職務。</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="預先將裝置註冊到-mdm">預先將裝置註冊到 MDM<a href="#預先將裝置註冊到-mdm" class="hash-link" aria-label="Direct link to 預先將裝置註冊到 MDM" title="Direct link to 預先將裝置註冊到 MDM">​</a></h3>
+<p>Jamf Pro 有著「PreStage Enrollments（預先註冊）」的功能。這功能是將裝置的設定存放在 Jamf Pro 中，當要對各裝置進行初始設定時就可以直接套用。若要使用「PreStage Enrollments（預先註冊）」的話，就如迄今為止的說明，將「自動裝置註冊」與 Jamf Pro 連結後就可以使用。此外，關於 Jamf Pro 各種管理功能的詳細說明請見第 18 頁後。
+<img decoding="async" loading="lazy" src="https://info.aatp.com.tw/hubfs/MDM%20Books%202025/Ch3/Jamf%20Pro%20Prestage%20Enrollment.png" alt="Jamf Pro Prestage Enrollment" class="img_ev3q">
+Jamf Pro 可以透過側面欄的「PreStage Enrollments」 來讀取透過「自動裝置註冊」配置裝置的設定。</p></div></article><nav class="pagination-nav docusaurus-mt-lg" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/Chapter 2"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Apple 詞彙表</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/Chapter 4"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">活用 MDM</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#apple-產品導入流程以及簡化手段" class="table-of-contents__link toc-highlight">Apple 產品導入流程以及簡化手段</a><ul><li><a href="#導入流程" class="table-of-contents__link toc-highlight">導入流程</a></li></ul></li><li><a href="#step-1---事前準備" class="table-of-contents__link toc-highlight">STEP 1 - 事前準備</a><ul><li><a href="#購買-apple-產品以及取得-d-u-n-s鄧白氏認證號碼" class="table-of-contents__link toc-highlight">購買 Apple 產品以及取得 D-U-N-S（鄧白氏）認證號碼</a></li></ul></li><li><a href="#註冊組織" class="table-of-contents__link toc-highlight">註冊組織</a><ul><li><a href="#註冊-abm--asm-並且通過-apple-審核" class="table-of-contents__link toc-highlight">註冊 ABM / ASM 並且通過 Apple 審核</a></li><li><a href="#通過-apple-的審查吧" class="table-of-contents__link toc-highlight">通過 Apple 的審查吧</a></li></ul></li><li><a href="#設定-abm--asm" class="table-of-contents__link toc-highlight">設定 ABM / ASM</a><ul><li><a href="#建立管理式-apple-帳號" class="table-of-contents__link toc-highlight">建立管理式 Apple 帳號</a></li><li><a href="#管理式-apple-帳號的功能與機制" class="table-of-contents__link toc-highlight">管理式 Apple 帳號的功能與機制</a></li><li><a href="#管理式-apple-帳號不能使用的功能與服務" class="table-of-contents__link toc-highlight">管理式 Apple 帳號不能使用的功能與服務</a></li></ul></li><li><a href="#連結-mdm-服務" class="table-of-contents__link toc-highlight">連結 MDM 服務</a><ul><li><a href="#整合-mdm-服務以及與自動裝置註冊的裝置連結" class="table-of-contents__link toc-highlight">整合 MDM 服務以及與「自動裝置註冊」的裝置連結</a></li><li><a href="#挑選-mdm-服務並且進行初始設定" class="table-of-contents__link toc-highlight">挑選 MDM 服務並且進行初始設定</a></li></ul></li><li><a href="#進行基本設定" class="table-of-contents__link toc-highlight">進行基本設定</a><ul><li><a href="#註冊使用者以及一次購買內容並且分發" class="table-of-contents__link toc-highlight">註冊使用者以及一次購買內容並且分發</a></li><li><a href="#設定職務" class="table-of-contents__link toc-highlight">設定職務</a></li><li><a href="#購買內容" class="table-of-contents__link toc-highlight">購買內容</a></li><li><a href="#設定位置" class="table-of-contents__link toc-highlight">設定「位置」</a></li><li><a href="#asm-的狀況" class="table-of-contents__link toc-highlight">ASM 的狀況</a></li><li><a href="#一次註冊教室資訊" class="table-of-contents__link toc-highlight">一次註冊「教室」資訊</a></li><li><a href="#預先將裝置註冊到-mdm" class="table-of-contents__link toc-highlight">預先將裝置註冊到 MDM</a></li></ul></li></ul></div></div></div></div></main></div></div></div><footer class="footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="col footer__col"><div class="footer__title">Docs</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/intro">Tutorial</a></li></ul></div><div class="col footer__col"><div class="footer__title">Community</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://stackoverflow.com/questions/tagged/docusaurus" target="_blank" rel="noopener noreferrer" class="footer__link-item">Stack Overflow<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li><li class="footer__item"><a href="https://discordapp.com/invite/docusaurus" target="_blank" rel="noopener noreferrer" class="footer__link-item">Discord<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li><li class="footer__item"><a href="https://x.com/docusaurus" target="_blank" rel="noopener noreferrer" class="footer__link-item">X<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li></ul></div><div class="col footer__col"><div class="footer__title">More</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/blog">Blog</a></li><li class="footer__item"><a href="https://github.com/facebook/docusaurus" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2025 My Project, Inc. Built with Docusaurus.</div></div></div></footer></div>
+</body>
+</html>
